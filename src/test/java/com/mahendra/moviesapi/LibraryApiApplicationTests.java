@@ -8,7 +8,7 @@ import com.mahendra.library.LibraryApiApplication;
 
 @SpringBootTest
 @ContextConfiguration(classes = LibraryApiApplication.class)
-class MoviesApiApplicationTests {
+class LibraryApiApplicationTests {
 
 	@Test
 	void contextLoads() {

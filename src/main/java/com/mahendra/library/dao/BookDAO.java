@@ -1,16 +1,15 @@
 package com.mahendra.library.dao;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.mahendra.library.models.Book;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface BookDAO extends CrudRepository<Book, Integer >{
-
-	Optional<Book> findById(Integer id);
 
 	List<Book> findByAuthor(String author);
 	List<Book> findByCategory(String category);
