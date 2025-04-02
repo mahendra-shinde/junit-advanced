@@ -2,7 +2,7 @@ package com.mahendra.library.models;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import io.swagger.annotations.ApiModelProperty;
 
 @Entity
