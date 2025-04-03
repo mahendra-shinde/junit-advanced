@@ -1,4 +1,4 @@
-package com.mahendra.moviesapi;
+package com.mahendra.library;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
