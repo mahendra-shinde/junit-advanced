@@ -8,15 +8,12 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 import com.mahendra.library.dao.BookDAO;
 import com.mahendra.library.models.Book;
-
-import io.swagger.v3.oas.annotations.Parameter;
 
 @SpringBootTest
 @ContextConfiguration(classes = LibraryApiApplication.class)
@@ -36,7 +33,7 @@ public class BookDAOIntegrationTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/books.csv", numLinesToSkip = 1)
     //@MethodSource("com.mahendra.library.BookDAOIntegrationTest#bookData")
-    void testFindBookById(@Parameter int id, @Parameter String title, @Parameter String author) {
+    void testFindBookById(int id, String title, String author) {
         Book book = bookDAO.findById(id).get();
         System.out.println(book.getTitle() + " by " + book.getAuthor());
         assertEquals(title, book.getTitle());
